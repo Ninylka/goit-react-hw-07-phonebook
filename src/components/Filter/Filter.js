@@ -1,19 +1,17 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { InputSearch, TitleInputSearch } from  '../FormContacts/FormContacts.styled'
-import { setFilter } from 'redux/filterSlice';
+import { selectFilter } from 'reduxFile/selectors';
+import { filterContacts } from 'reduxFile/filterSlice';
 
 
 
  export const Filter =  () => { 
     const dispatch = useDispatch();
-    const filterValue = useSelector((state) => state.filter.value);
-
-   
-
+    const filterValue = useSelector(selectFilter);
 
     const handleFilterChange = (e) => {
         const { value } = e.target;
-        dispatch(setFilter(value));
+        dispatch(filterContacts(value));
       };
     
 

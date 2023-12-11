@@ -3,8 +3,9 @@ import { nanoid } from 'nanoid';
 import { FormPhonebook,ButtonPhonebook,LabelPhonebook,InputPhonebookName,InputPhonebookNumber } from './FormContacts.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-import { addContact } from 'redux/contactsSlice';
-import { selectContacts } from 'redux/selectors';
+// import { addContact } from 'reduxFile/contactsSlice';
+import { selectContacts } from 'reduxFile/selectors';
+import { addContact } from 'reduxFile/operations';
 
 
 export const FormContacts = () => {
