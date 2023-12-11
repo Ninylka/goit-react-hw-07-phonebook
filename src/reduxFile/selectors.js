@@ -15,8 +15,6 @@ export const selectFilter = state => state.filter.value;
     [ selectContacts, selectFilter],
    
      (contacts, filter) => {
-      console.log('contacts:', contacts);
-      console.log('filter:', filter);
        return contacts.filter(contact => contact.name.toLowerCase()
         .includes(filter.toLowerCase()))
      }
